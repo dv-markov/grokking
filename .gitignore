@@ -1,0 +1,50 @@
+### Python Pycharm template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+.env/
+venv/
+.venv/
+build/
+dist/
+downloads/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Django stuff:
+*.log
+local_settings.py
+
+# idea folder, uncomment if you don't need it
+.idea
+
+# macOS
+.DS_Store
+._*
