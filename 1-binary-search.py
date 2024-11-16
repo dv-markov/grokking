@@ -21,16 +21,21 @@ guess_number = max_number // 2
 trials_count = 1
 while  (user_reply := input(f"Step {trials_count}: Have you chosen number {guess_number}? \n"
              f"Type 'y' if correct, '>' if your number is bigger or '<' if your number is smaller: ")) != "y":
+    if (start_number + 1 == guess_number) and (max_number - 1 == guess_number):
+        print_with_spacers(f"🤖: Don't lie to me, little human!\n"
+                           f"🤖: I know your number was {guess_number}!",
+                           end="")
+        break
     if user_reply == ">":
         start_number = guess_number
-        guess_number = (start_number + max_number) // 2
     elif user_reply == "<":
         max_number = guess_number
-        guess_number = (start_number + max_number) // 2
     else:
         print("Wrong input, please try again")
         continue
     trials_count += 1
+    guess_number = (start_number + max_number) // 2
+    print(f"{start_number=}, {guess_number=}, {max_number=}")
 
 win_phrase = f"\n🤖: Ha-ha-ha!!! As promised, not more than {max_steps} !" if trials_count <= max_steps else ""
 
