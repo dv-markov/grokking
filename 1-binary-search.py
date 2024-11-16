@@ -35,3 +35,4 @@ while  (user_reply := input(f"Step {trials_count}: Have you chosen number {guess
 print_with_spacers(f"""🤖: The game is over in {trials_count} steps.
 🤖: Ha-ha-ha!!! As promised, not more than {max_steps} !
 🤖: Thank you for playing, human!""")
+
