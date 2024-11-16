@@ -10,9 +10,9 @@ print_with_spacers("Binary search algorythm")
 
 while not (max_number := input("Enter the max number (positive integer): ")).isdigit():
     print("Wrong input, please try again")
-max_number = int(max_number)
-print_with_spacers(f"🤖: Pick any integer number between zero and {max_number} remember it!")
-max_steps = round(math.log(max_number, 2))
+max_number = int(max_number) + 1
+print_with_spacers(f"🤖: Pick any integer number between zero and {max_number - 1} remember it!")
+max_steps = math.ceil(math.log(max_number, 2))
 input("Press enter to continue...")
 print_with_spacers(f"🤖: {"*" * max_steps} > I bet I will guess your number not more than in {max_steps} steps! < {"*" * max_steps}")
 
@@ -32,6 +32,7 @@ while  (user_reply := input(f"Step {trials_count}: Have you chosen number {guess
         continue
     trials_count += 1
 
-print_with_spacers(f"""🤖: The game is over in {trials_count} steps.
-🤖: Ha-ha-ha!!! As promised, not more than {max_steps} !
+win_phrase = f"\n🤖: Ha-ha-ha!!! As promised, not more than {max_steps} !" if trials_count <= max_steps else ""
+
+print_with_spacers(f"""🤖: The game is over in {trials_count} steps.{win_phrase}
 🤖: Thank you for playing, human!""")
