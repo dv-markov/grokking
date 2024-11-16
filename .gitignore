@@ -43,7 +43,7 @@ coverage.xml
 local_settings.py
 
 # idea folder, uncomment if you don't need it
-.idea
+.idea/
 
 # macOS
 .DS_Store
